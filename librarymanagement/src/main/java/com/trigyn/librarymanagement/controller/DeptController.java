@@ -16,12 +16,12 @@ public class DeptController {
     @Autowired
     DeptService deptService;
     @GetMapping("/department")
-    List<DeptVO> getStudent(){
+    List<DeptVO> getBook(){
         return deptService.getAll();
     }
 
     @PostMapping("/department")
-    Boolean createStudent(@RequestBody DeptVO deptVO){
+    Boolean createBook(@RequestBody DeptVO deptVO){
         return deptService.createDept(deptVO);
     }
 }

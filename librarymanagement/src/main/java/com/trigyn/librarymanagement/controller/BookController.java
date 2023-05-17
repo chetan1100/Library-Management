@@ -22,7 +22,7 @@ public class BookController {
 
     @PostMapping("/savebook")
     Boolean createBook(@RequestBody BookVO bookVO){
-        return bookService.createStudent(bookVO);
+        return bookService.createbook(bookVO);
     }
 
     @GetMapping("/getbookbyname")

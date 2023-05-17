@@ -8,7 +8,7 @@ public class Book {
     @Id
     private Long id;
 
-    @Column(name="student_name")
+    @Column(name="book_name")
     private String name;
 
     @Column

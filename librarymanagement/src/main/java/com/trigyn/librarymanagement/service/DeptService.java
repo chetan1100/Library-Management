@@ -35,7 +35,7 @@ public class DeptService {
         return true;
     }
 
-    private List<BookVO> convertStudents(List<Book> books){
+    private List<BookVO> convertBooks(List<Book> books){
 
         List<BookVO> bookVOS = new ArrayList<>();
 
@@ -53,7 +53,7 @@ public class DeptService {
         DeptVO departmentVO = new DeptVO();
         departmentVO.setId(dept.getId());
         departmentVO.setDeptName(dept.getDeptName());
-        departmentVO.setBookVOS(convertStudents(dept.getBooks()));
+        departmentVO.setBookVOS(convertBooks(dept.getBooks()));
         return departmentVO;
     }
 

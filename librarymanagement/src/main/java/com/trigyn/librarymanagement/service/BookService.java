@@ -30,22 +30,22 @@ public class BookService {
         }
         return book;
     }
-    public Boolean createStudent(BookVO bookVO) {
-        Book student = convertVO(bookVO);
+    public Boolean createbook(BookVO bookVO) {
+        Book book = convertVO(bookVO);
         try {
-            bookRepository.save(student);
+            bookRepository.save(book);
         } catch (Exception exception) {
             return false;
         }
         return true;
     }
 
-    private BookVO convertEntity(Book student) {
+    private BookVO convertEntity(Book book) {
         BookVO bookVO = new BookVO();
-        bookVO.setId(student.getId());
-        bookVO.setAuthor(student.getAuthor());
-        bookVO.setName(student.getName());
-        bookVO.setDeptID(student.getDepartment().getId());
+        bookVO.setId(book.getId());
+        bookVO.setAuthor(book.getAuthor());
+        bookVO.setName(book.getName());
+        bookVO.setDeptID(book.getDepartment().getId());
         return bookVO;
     }
 
